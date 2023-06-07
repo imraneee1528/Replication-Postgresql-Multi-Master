@@ -6,7 +6,7 @@
 
 first update and then install some requirments 
 
-## sudo apt install wget gnupg2 lsb-release curl apt-transport-https ca-certificates
+### sudo apt install wget gnupg2 lsb-release curl apt-transport-https ca-certificates
 
 ## Postgresql 15 install
 
