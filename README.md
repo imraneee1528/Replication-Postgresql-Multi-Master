@@ -1,14 +1,9 @@
 #        Master Master Postgresql Replication
 
 
-
-## Installing PostgreSQL Server master-1 and Master-2 
-
 first update and then install some requirments 
 
 #### sudo apt install wget gnupg2 lsb-release curl apt-transport-https ca-certificates
-
-#### Postgresql 15 install
 
 Next, enter the 'curl' command below to download the PostgreSQL repository GPG key, convert the .asc file to .gpg via the 'gpg --dearmor' command, then add the PostgreSQL repository.
 
@@ -20,4 +15,21 @@ update and then install specific version
 
 #### sudo apt install postgresql-15
 
+#### sudo systemctl is-enabled postgresql
+
+#### sudo systemctl status postgresql
+
+you will also need to install the PostgreSQL extension 'plperl', which will be needed by the Bucardo software. Enter the following 'apt install' command to install the 'plperl' extension.
+
+#### sudo apt install postgresql-plperl-15
+
+Now we create bucado user and password and create emty db 
+
+####  cd /var/lib/postgresql
+
+#### sudo -u postgres psql
+
+#### CREATE USER bucardo WITH SUPERUSER;
+
+#### CREATE DATABASE bucardo OWNER bucardo;
  
