@@ -3,8 +3,13 @@
 ## Master Server 1 : 192.168.122.5
 ## Master Server 2 :192.168.122.6
 
-first update and then install some requirments both server (maseter server 1 and 2 )
+first at host then  update and then install some requirments both server (maseter server 1 and 2 )
+#### sudo vim /etc/hosts
+###### master-server-1 192.168.122.5
+###### master-server-2 192.168.122.6
 
+#### sudo reboot
+#### sudo apt update -y
 #### sudo apt install wget gnupg2 lsb-release curl apt-transport-https ca-certificates
 
 Next, enter the 'curl' command below to download the PostgreSQL repository GPG key, convert the .asc file to .gpg via the 'gpg --dearmor' command, then add the PostgreSQL repository.
@@ -136,6 +141,8 @@ Automatic start when server reboot do this
 ###### bucardo start
 ###### exit 0
 
+#### sudo chmod +x /etc/rc.local
+#### sudo reboot
 #### bucardo install
 
 Enter the following command to define the database server and database name that will be replication. That information will be stored as the 'server1' for the PostgreSQL server master server 1 and 'server2' for the master server 2 
